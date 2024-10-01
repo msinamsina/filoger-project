@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="{{url_for('static',filename='stylesheet.css')}}">
+
+</head>
+<body>
+    <div><img src="static/assets/img4.png" class="home_img"> </div>
+    <div class="container text-center">
+        <h1>Breast Cancer Prediction </h1>
+        <h4> This is a smart web service</h4>
+        <p>Welcome! Please <a href="{{ url_for('main.login') }}">log in</a> or <a href="{{ url_for('main.register') }}">register</a> to use the AI model.</p>
+    </div>
+</body>
+</html>

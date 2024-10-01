@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input House Features</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="{{url_for('static',filename='stylesheet.css')}}">
+</head>
+<body class="img-background">
+    <!-- <img src="static/assets/img1.jpg" class="img"> -->
+
+    <div class="container box">
+        <h2 class="mt-5 ">Enter the Model Features</h2>
+        <form method="POST">
+            <div class="form-group">               
+                {% for ft in features %}
+                <label>{{ft}}</label>
+                <input type="text" class="form-control" name="{{ft}}" required>           
+                {% endfor %}
+            </div>  
+            <p><button type="submit" class="btn btn-purple  "> Make Prediction</button></p>
+        </form>
+    </div>
+</body>
+</html>
