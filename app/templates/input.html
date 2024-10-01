@@ -11,16 +11,20 @@
     <!-- <img src="static/assets/img1.jpg" class="img"> -->
 
     <div class="container box">
-        <h2 class="mt-5 ">Enter the Model Features</h2>
-        <form method="POST">
-            <div class="form-group">               
-                {% for ft in features %}
-                <label>{{ft}}</label>
-                <input type="text" class="form-control" name="{{ft}}" required>           
-                {% endfor %}
-            </div>  
-            <p><button type="submit" class="btn btn-purple  "> Make Prediction</button></p>
+        
+           <h2 class="mt-5 ">Enter the Model Features</h2>
+         
+           <form method="POST">
+               <div class="form-group">             
+                   {% for ft in features %}
+                   <label>{{ft}}</label>
+                   <input type="text" class="form-control" name="{{ft}}" required>           
+                   {% endfor %}
+               </div>  
+    </div>    
+        <p class=" container sticky_button"><button type="submit" class="btn btn-purple  "> Make Prediction</button></p>    
         </form>
-    </div>
+    
+    
 </body>
 </html>

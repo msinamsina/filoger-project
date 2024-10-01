@@ -1,5 +1,7 @@
-# filoger-MLOps-project
-![Alt text](app\static\assets\img4.png "Title")
+
+# Filoger-MLOps-projec
+
+![Alt text](./app/static/assets/img4.png)
 # Breast Cancer Prediction Smart Web Service
 
 ## Overview
@@ -10,7 +12,6 @@ The Breast Cancer Prediction Web Service is a Flask-based application designed t
 ```bash
 .
 ├── README.md
-
 ├── app
 │   ├── models
 │   │   ├── breast_cancer.py
@@ -34,7 +35,9 @@ The Breast Cancer Prediction Web Service is a Flask-based application designed t
 
 ###
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg) 
-![Flask](https://img.shields.io/badge/Flask-2.x-black.svg) 
+![Flask](https://img.shields.io/badge/Flask-2.x-blue.svg) 
+![Static Badge](https://img.shields.io/badge/html-orange.svg)
+![Static Badge](https://img.shields.io/badge/CSS-BS-green.svg)
 
 
 ### Installation and Run
@@ -56,3 +59,12 @@ The Breast Cancer Prediction Web Service is a Flask-based application designed t
 
 
 The application will be available at local your host:  http://127.0.0.1:5000/ .
+
+
+## 
+### App snapshots
+
+<div style="text-align: center;"><img src="./app/static/assets/web_snapshot1.JPG" alt="drawing" style="width:680px; height=350px;"/></div>
+<img src="./app/static/assets/web_snapshot2.JPG" alt="drawing" style="width:480px; height=550px;"/> 
+<img src="./app/static/assets/web_snapshot3.JPG" alt="drawing" style="width:480px; height=550px;"/> 
+

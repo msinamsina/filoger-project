@@ -87,6 +87,7 @@ def input_data():
 @main.route('/result')
 @login_required
 def result():
+    
     return render_template('result.html')
 
 #error handling only in main root
