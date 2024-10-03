@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}" type='text/css'>
+
+<div class="container ">
+  <div>
+    <h2 class="mt-5">Login</h2>
+  </div>
+  <div>
+    <form method="POST">
+        <div class="form-group">
+            <!--<label>Username</label>-->
+            <input type="text" class="form-control" name="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+            <!--<label>Password</label>-->
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+            <!--<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>-->
+            <span class="eye-icon" id="togglePassword">
+                <i id="eyeIcon" class="fa fa-eye"></i> <!-- Eye Icon -->
+            </span>
+
+        </div>
+        <div class="btn-login" >
+            <button type="submit" class="btn btn-primary">SIGN IN</button>
+        </div>
+    </form>
+    <div class="register">
+    <p class="mt-2">Don't have an account? <a class= "link-register" href="{{ url_for('register') }}">Register here.</a></p>
+    </div>
+  </div> 
+
+</div>
+
+{% endblock %}

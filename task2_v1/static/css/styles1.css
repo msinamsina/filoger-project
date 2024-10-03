@@ -1,0 +1,141 @@
+
+
+.container{
+
+    position: center;
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+
+}
+
+
+
+.form-group{
+    position: relative;
+}
+
+/*.img{
+    background-image: url(../css/image/bg2.jpg);
+    height: 1200px;
+
+}*/
+
+.btn{
+
+    background-color: darkgreen;
+    border-radius: 5px;
+    border-color: aliceblue;
+    width: 250px; 
+    position: center;
+    margin-left: 80px;
+    
+}
+
+
+.form-control {
+    background: transparent;
+    border: 0.5px;
+    height: 50px;
+    color:rgb(8, 8, 8);
+    border: 1px solid transparent;
+    background: rgba(236, 233, 233, 0.08);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    font-size: 30px;
+    border-color: rgb(84, 55, 247);
+    
+}
+
+.form-control{
+   
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    
+}
+
+.form-control:hover{
+    border: 1 px;
+    border-color:transparent;
+    background: transparent;
+
+}
+
+input:hover{
+    border: 3 px;
+    border-color:rgb(84, 55, 247);
+    background: transparent; 
+    overflow: visible;
+    
+}
+
+.btn.btn-primary {
+    background:  #2506b1 !important;
+    border: 1px solid   #2506b1 !important;
+    color: #fdfdfd !important;
+}
+
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 40px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.btn-login{
+    padding-top: 25px;
+    margin-left:25px;
+}
+
+.register{
+    
+    font-weight: bold;
+    padding-top: 15px;
+    position: center center;
+    margin-left: 90px;
+    
+}
+
+.link-register{
+    color: #591ce7;
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+.link-register:hover{
+    text-decoration: none;
+    color: #f5900c;
+}
+
+h2{
+    font-size: 42px;
+    color: #000000;
+    margin-left:150px;
+    margin-top: 10px;
+}
+
+.mt-5{
+    margin-bottom: 30px;
+}
+
+
+
+  
