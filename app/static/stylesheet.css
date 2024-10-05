@@ -66,3 +66,15 @@
     overflow-y: auto; /* Enable vertical scrolling */
     ;
 }
+.btn-light-green {
+    background-color: #6ed86e; /* Light green color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.btn-light-green:hover {
+    background-color: #0f4d0f; /* Darker green when hovered */
+}

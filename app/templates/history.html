@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Input House Features</title>
+    <title>Input Model Features</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='stylesheet.css')}}">
 </head>
 <body class="img-background">
 <!-- <img src="static/assets/img1.jpg" class="img"> -->
 
-<div class="container box">
+<div class="container box" style="width: 100%; height: 85%;">
 
     <h2 class="mt-5 ">History</h2>
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            {% for feat in feature_names %}
-            <th>{{ feat }}</th>
-            {% endfor %}
-            <th>Prediction</th>
-        </tr>
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                {% for feat in feature_names %}
+                <th class="text-center">{{ feat }}</th>
+                {% endfor %}
+                <th class="text-center">Prediction</th>
+            </tr>
         </thead>
         <tbody>
-        {% for dd in data %}
-        <tr>
-            {% for feat in feature_names %}
-            <td>
-                {{ dd[feat] }}
-            </td>
+            {% for dd in data %}
+            <tr>
+                {% for feat in feature_names %}
+                <td class="text-center">
+                    {{ dd[feat] }}
+                </td>
+                {% endfor %}
+                <td class="text-center">
+                    {{ dd['prediction'] }}
+                </td>
+            </tr>
             {% endfor %}
-            <td>
-                {{ dd['prediction'] }}
-        </tr>
-        {% endfor %}
         </tbody>
     </table>
+    
 </div>
 
+<br>
+<a href="{{ url_for('main.home') }}" class="btn btn-light-green">Back</a>
 
 </body>
 </html>
