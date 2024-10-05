@@ -6,6 +6,8 @@
     <title>Input Model Features</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='stylesheet.css')}}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body class="img-background">
 <!-- <img src="static/assets/img1.jpg" class="img"> -->
@@ -14,8 +16,8 @@
 
     <h2 class="mt-5 ">History</h2>
 
-    <table class="table table-striped table-hover table-bordered">
-        <thead class="thead-dark">
+    <table class="table table-striped table-hover table-bordered custom-table">
+        <thead>
             <tr>
                 {% for feat in feature_names %}
                 <th class="text-center">{{ feat }}</th>
@@ -42,7 +44,7 @@
 </div>
 
 <br>
-<a href="{{ url_for('main.home') }}" class="btn btn-light-green">Back</a>
+<a href="{{ url_for('main.home') }}"  style="margin-left: 40px;"  class="btn btn-light-green">Back</a>
 
 </body>
 </html>

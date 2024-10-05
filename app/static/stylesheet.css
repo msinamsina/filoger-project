@@ -76,5 +76,28 @@
 }
 
 .btn-light-green:hover {
-    background-color: #0f4d0f; /* Darker green when hovered */
+    background-color: #146414; /* Darker green when hovered */
+}
+
+.custom-table {
+    background-color: #f7f2ff; /* Light purple background for the table */
+}
+
+.custom-table th {
+    background-color: #564581; /* Dark purple for header */
+    color: white; /* White text for header */
+}
+
+.custom-table th, .custom-table td {
+    padding: 15px; /* Padding for cells */
+    text-align: center; /* Center align text */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e2e3ff; /* Light blue when hovering over a row */
+}
+
+/* Optional: Ensure alternate row colors work with Bootstrap's striped */
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #f1c4e7; /* Light pink for odd rows */
 }
