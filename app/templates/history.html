@@ -12,19 +12,31 @@
 
 <div class="container box">
 
-    <h2 class="mt-5 ">Enter the Model Features</h2>
+    <h2 class="mt-5 ">History</h2>
 
-    <form method="POST">
-        <div class="form-group">
-            {% for ft in features %}
-            <label>{{ft}}</label>
-            <input type="text" class="form-control" name="{{ft}}" required>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            {% for feat in feature_names %}
+            <th>{{ feat }}</th>
             {% endfor %}
-        </div>
-        <p class=" container sticky_button">
-            <button type="submit" class="btn btn-purple  "> Make Prediction</button>
-        </p>
-    </form>
+            <th>Prediction</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for dd in data %}
+        <tr>
+            {% for feat in feature_names %}
+            <td>
+                {{ dd[feat] }}
+            </td>
+            {% endfor %}
+            <td>
+                {{ dd['prediction'] }}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 

@@ -5,32 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} My Flask APP {% endblock %}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link  rel="stylesheet" href="{{url_for('static',filename='stylesheet2.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='stylesheet2.css')}}">
 </head>
 <body>
 
-    <!-- Flask messages -->
-    <div class="container">
-        {% with messages = get_flashed_messages(with_categories=true) %}
+<!-- Flask messages -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
-        <div class="mt-4">
+    <div class="mt-4">
         {% for category , message in messages %}
-           <div class="alert alert-{{category}} alert-dismissable fade show" role="alert">
+        <div class="alert alert-{{category}} alert-dismissable fade show" role="alert">
             {{message}}
-           </li> 
-        {% endfor %}
+            </li>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <!-- message -->
+        <div class="alert alert-warning">
+            <strong>Danger!</strong> Sorry, the page you're looking for does not exist :(
         </div>
 
-     <!-- message -->
-    <div class="alert alert-warning">
-        <strong>Danger!</strong> Sorry, the page you're looking for does not exist :(
-    </div>
+        <div class="container text-center">
+            <p> Back to <a href="{{ url_for('main.login') }}">Home Page</a></p>
+        </div>
 
-    <div class="container text-center">
-        <p> Back to <a href="{{ url_for('main.login') }}">Home Page</a> </p>
     </div>
-
-</div>
 </body>
 </html>
 
