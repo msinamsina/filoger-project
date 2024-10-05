@@ -19,9 +19,19 @@ def login_required(f):
     wrap.__name__ = f.__name__
     return wrap
 
+def not_logged_in(f):
+    def wrap(*args, **kwargs):
+        if 'username' in session:
+            flash('You are already logged in!', 'info')
+            return redirect(url_for('main.input_data'))
+        return f(*args, **kwargs)
+    wrap.__name__ = f.__name__
+    return wrap
+
 @main.route('/')
 def home():
-    return render_template('home.html')
+    username = session.get('username', None)
+    return render_template('home.html', username=username)
 
 @main.route('/register', methods=['GET', 'POST'])
 def register():
@@ -36,7 +46,7 @@ def register():
             flash('This username is already registered. Please log in or use a different username.', 'error')
             return redirect(url_for('main.register')) 
         
-        #if the username doesnt exist
+        #if the username doesn't exist
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')  
         new_user = User(username=username, password=hashed_password)
 
@@ -50,6 +60,7 @@ def register():
     return render_template('register.html')
 
 @main.route('/login', methods=['GET', 'POST'])
+@not_logged_in
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -59,13 +70,14 @@ def login():
         if user and bcrypt.check_password_hash(user.password, password):
             session['username'] = user.username
             flash('Login successful!', 'success')
-            return redirect(url_for('main.input_data'))  
+            return redirect(url_for('main.home'))
         else:
             flash('Login failed, check your username or password', 'danger')
         
     return render_template('login.html')
 
 @main.route('/logout')
+@login_required
 def logout():
     session.pop('username', None)  
     flash('You have been logged out', 'info')
@@ -137,7 +149,7 @@ def history():
     return render_template('history.html', data=data_list, feature_names=data.feature_names)
 
 #error handling only in main root
-# @main.errorhandler(404)
-# def page_not_found(error):
-    
-#     return render_template('404.html', error_message="Something went wrong, page not found"), 404
+@main.errorhandler(404)
+def page_not_found(error):
+
+    return render_template('404.html', error_message="Something went wrong, page not found"), 404
