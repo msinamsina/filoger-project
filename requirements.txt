@@ -2,6 +2,5 @@ Flask
 Flask-SQLAlchemy
 flask-bcrypt
 pycaret
-sklearn
+scikit-learn
 pandas
-pickle
